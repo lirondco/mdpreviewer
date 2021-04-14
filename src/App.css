@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Roboto+Mono&display=swap");
+
+html,
+body {
+  background-color: #121212;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  border-radius: 8px;
+  background-color: #181818;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+}
+
+.editor-window {
+  width: 50%;
+  font-family: "Nunito", sans-serif;
+}
+
+.window-enlarged {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+}
+
+.preview-window {
+  width: 80%;
+  font-family: "Nunito", sans-serif;
+}
+
+.title-bar {
+  background-color: #404040;
+  border-radius: 8px 8px 0 0;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.window-title {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.arrow {
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  color: limegreen;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrow:hover {
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#editor {
+  resize: none;
+  margin: 10px;
+  padding: 8px;
+  font-family: "Roboto Mono", monospace;
+  background-color: #282828;
+  color: white;
+  border-radius: 8px;
+}
+
+#preview {
+  color: white;
+  border-radius: 8px;
+  background-color: #282828;
+  padding: 8px;
+  margin: 10px;
+}
+
+#preview code, pre {
+  color: pink;
+  background-color: #404040;
+}
+
+#preview a {
+  color: yellow;
+}
+
+blockquote {
+  background: #404040;
+  border-left: 10px solid cornsilk;
+  margin: 1.5em 10px;
+  padding: 1.0em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-style: italic;
+}
+blockquote:before {
+  color: cornsilk;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+table, tr, td, th {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+th {
+  color: orange;
 }
