@@ -44,7 +44,6 @@ const Preview = ({
         </Tooltip>
       </div>
       <div id="preview" dangerouslySetInnerHTML={{ __html: text }}>
-          {" "}
       </div>
     </div>
   );
